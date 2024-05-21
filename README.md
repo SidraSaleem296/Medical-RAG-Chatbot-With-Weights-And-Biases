@@ -25,7 +25,7 @@ You can also run this project directly in Google Colab. Click the link below to 
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/yourusername/medical-data-chatbot.git
+    git clone https://github.com/sidrasaleem296/medical-data-chatbot.git
     cd medical-data-chatbot
     ```
 
