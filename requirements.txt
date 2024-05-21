@@ -1,0 +1,8 @@
+faiss-gpu
+PyPDF2
+langchain
+google-generativeai
+python-dotenv
+langchain-community
+langchain_google_genai
+wandb
