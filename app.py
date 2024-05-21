@@ -92,3 +92,9 @@ def main(question, pdf_path):
 pdf_path = "/content/L1- Introduction To Orthopedics.pdf"  # Change this to your actual PDF file path
 question = "What are the diseases discussed and their treatment?"
 main(question, pdf_path)
+embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
+vector_store.save_local("faiss_index")
+response = asyncio.get_event_loop().run_until_complete(get_answer(question, raw_text))
+print(response)
+wandb.log({"Response": response, "Context": raw_text[:500]})
